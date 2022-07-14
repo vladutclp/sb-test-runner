@@ -5,6 +5,7 @@ import { Icon } from '@chakra-ui/react';
 import { TaskList } from './components/TaskList';
 import { EmptyState } from './components/EmptyState';
 import { useTasks } from './useTasks';
+import css from './InboxScreen.module.css';
 
 const FrownIcon = (props) => (
   <Icon
@@ -52,7 +53,10 @@ export const InboxScreen = ({ error }) => {
     <Box p={4} bg="brand.300">
       <Box as="nav" bg="brand.200" py={6} px={5}>
         <Heading
+          className={css.mainClass}
           as="h1"
+          id='heading'
+          data-testid='heading'
           fontSize="lg"
           lineHeight="8"
           color="brand.500"
